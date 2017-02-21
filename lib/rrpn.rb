@@ -68,6 +68,6 @@ class RRPN
   end
 
   def to_s
-    @queue.join(' ')
+    queue.join(' ')
   end
 end
