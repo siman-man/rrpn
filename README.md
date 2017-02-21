@@ -26,6 +26,7 @@ Integer
 rpn = '1 + 2 + 3'.to_rpn
 p rpn.queue #=> [1, 2, :+, 3, :+]
 p rpn.calc  #=> 6
+puts rpn    #=> 1 2 + 3 +
 ```
 
 Float
@@ -34,6 +35,7 @@ Float
 rpn = '(1.0 + 2.0) * 3'.to_rpn
 p rpn.queue #=> [1.0, 2.0, :+, 3, :*]
 p rpn.calc  #=> 9.0
+puts rpn    #=> 1.0 2.0 + 3 *
 ```
 
 Rational
@@ -42,6 +44,7 @@ Rational
 rpn = '1/2r + 1/3r'.to_rpn
 p rpn.queue #=> [1, "2r", :/, 1, "3r", :/, :+]
 p rpn.calc  #=> (5/6)
+puts rpn    #=> 1 2r / 1 3r / +
 ```
 
 Complex
@@ -50,6 +53,7 @@ Complex
 rpn = '(1+2i) + (3+3i)'.to_rpn
 p rpn.queue #=> [1, (0+2i), :+, 3, (0+3i), :+, :+]
 p rpn.calc  #=> (4+5i)
+puts rpn    #=> 1 0+2i + 3 0+3i + +
 ```
 
 Other
@@ -58,6 +62,7 @@ Other
 rpn = '(1 << 3) + (16 >> 2)'.to_rpn
 p rpn.queue #=> [1, 3, :<<, 16, 2, :>>, :+]
 p rpn.calc  #=> 12
+puts rpn    #=> 1 3 << 16 2 >> +
 ```
 
 Calculation
