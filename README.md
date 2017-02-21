@@ -1,5 +1,7 @@
 # RRPN
 
+[![Build Status](https://travis-ci.org/siman-man/rrpn.svg?branch=master)](https://travis-ci.org/siman-man/rrpn)
+
 RRPN is Reverse Polish Notation calculator and converter, written in Ruby.
 
 ## Installation
