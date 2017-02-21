@@ -64,7 +64,7 @@ class RRPN
   end
 
   def calc
-    RRPN.calc(queue)
+    RRPN.calc(queue.dup)
   end
 
   def to_s

@@ -10,6 +10,17 @@ RSpec.describe RRPN do
       it { expect(RRPN.calc(test_case02)).to eq(10_000) }
     end
 
+    describe 'repeat output' do
+      let(:test_case01) { '1 + 1' }
+
+      it 'repeat output' do
+        rpn = test_case01.to_rpn
+
+        expect(rpn.calc).to eq(2)
+        expect(rpn.calc).to eq(2)
+      end
+    end
+
     describe 'Integer' do
       context 'default' do
         let(:test_case01) { '1 + 1' }
