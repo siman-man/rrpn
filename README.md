@@ -53,9 +53,9 @@ Complex
 
 ```ruby
 rpn = '(1+2i) + (3+3i)'.to_rpn
-p rpn.queue #=> [1, (0+2i), :+, 3, (0+3i), :+, :+]
+p rpn.queue #=> [1, "2i", :+, 3, "3i", :+, :+]
 p rpn.calc  #=> (4+5i)
-puts rpn    #=> 1 0+2i + 3 0+3i + +
+puts rpn    #=> 1 2i + 3 3i + +
 ```
 
 Other
