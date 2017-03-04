@@ -31,7 +31,7 @@ class RRPN
   def initialize(formula)
     @formula = formula
     stree = Ripper.sexp(@formula)
-    @queue = parse(stree[1..-1])
+    @queue = parse(stree[1..-1]).flatten
   end
 
   def parse(tree)
@@ -49,9 +49,9 @@ class RRPN
       when :@float
         return tree[1].to_f
       when :@rational
-        return tree[1].to_s
+        return tree[1]
       when :@imaginary
-        return tree[1].to_c
+        return tree[1]
       else
         if tree[0].instance_of?(Array)
           queue << parse(tree[0])
@@ -60,7 +60,7 @@ class RRPN
         end
     end
 
-    queue.flatten
+    queue
   end
 
   def calc

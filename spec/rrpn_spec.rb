@@ -105,9 +105,9 @@ RSpec.describe RRPN do
       let(:test_case02) { '2i ** 2' }
       let(:test_case03) { '(1+2i) * 3' }
 
-      it { expect(test_case01.to_rpn.to_s).to eq('1 0+2i + 3 + 0+4i +') }
-      it { expect(test_case02.to_rpn.to_s).to eq('0+2i 2 **') }
-      it { expect(test_case03.to_rpn.to_s).to eq('1 0+2i + 3 *') }
+      it { expect(test_case01.to_rpn.to_s).to eq('1 2i + 3 + 4i +') }
+      it { expect(test_case02.to_rpn.to_s).to eq('2i 2 **') }
+      it { expect(test_case03.to_rpn.to_s).to eq('1 2i + 3 *') }
       it { expect(test_case01.to_rpn.calc).to eq(eval(test_case01)) }
       it { expect(test_case02.to_rpn.calc).to eq(eval(test_case02)) }
       it { expect(test_case03.to_rpn.calc).to eq(eval(test_case03)) }
