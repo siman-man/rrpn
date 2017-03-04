@@ -13,8 +13,7 @@ class RRPN
     stack = []
 
     until queue.empty?
-      v = queue.shift
-      stack << v
+      stack << queue.shift
 
       if %i(+ - * / ** << >> % & ^ |).include?(stack.last)
         receiver, arg, op = stack.pop(3).map { |e| e.instance_of?(String) ? eval(e) : e }
