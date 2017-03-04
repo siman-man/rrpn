@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "rrpn"
-  spec.version       = "1.0.0"
+  spec.version       = "1.1.0"
   spec.authors       = ["siman-man"]
   spec.email         = ["k128585@ie.u-ryukyu.ac.jp"]
 
