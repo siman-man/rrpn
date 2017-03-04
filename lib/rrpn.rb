@@ -55,7 +55,7 @@ class RRPN
         if tree[0].instance_of?(Array)
           queue << parse(tree[0])
         else
-          raise "Parse failed. '#{@formula}' - #{tree.inspect}"
+          raise "Parse failed. `#{@formula}' - #{tree.inspect}"
         end
     end
 
